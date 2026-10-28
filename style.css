@@ -382,3 +382,48 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Project 5 additions: attendee list + celebration ===== */
+.attendee-list-section {
+  margin-top: 2rem;
+}
+.attendee-list-section h3 {
+  margin-bottom: 1rem;
+}
+.attendee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 340px;
+  overflow-y: auto;
+}
+.attendee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid #e0e6ec;
+  border-left: 5px solid #0068b5;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+}
+.attendee-item.water { border-left-color: #0068b5; }
+.attendee-item.zero { border-left-color: #2e8b57; }
+.attendee-item.power { border-left-color: #e07b00; }
+.attendee-name { font-weight: 600; color: #1c2b3a; overflow-wrap: anywhere; }
+.attendee-team { font-size: 0.9rem; color: #3a4a5a; white-space: nowrap; }
+.attendee-empty { color: #5a6a7a; padding: 0.5rem 0; }
+.celebration {
+  background: #fff8e1;
+  border: 2px solid #ffc107;
+  color: #5a4200;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .attendee-item { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+}
